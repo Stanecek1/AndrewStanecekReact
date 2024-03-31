@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper{ 
+  height: 80%;
+  max-height: 60dvh;
+  min-height: 141px;
+  width: 700px;
+  overflow: hidden;
+  background: black;
+}
+.wrapper::after {
+  height: 78%;
+  max-height: 60dvh;
+  min-height: 280px;
+  content:"";
+  position:absolute;
+  background: black;
+}
+.boxes {
+  top:-50px;
+  position: relative;
+  background: black;
+}
+.box{
+  height:100px;
+  width:700px;
+  font-size:25px;
+  line-height:94px;
+  text-align:center;
+  background: black;
+  color: white;
+}
