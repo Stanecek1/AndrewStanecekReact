@@ -12,6 +12,17 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: 'Oswald-VariableFont_wght';
+  src: local('Oswald-VariableFont_wght'), url(./fonts/Oswald-VariableFont_wght.ttf) format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+.name{
+  font-family:Oswald-VariableFont_wght
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,7 +46,7 @@ code {
 .boxes {
   top:-50px;
   position: relative;
-  background: black;
+  background: rgba(0, 0, 0, 0);
 }
 .box{
   height:100px;
@@ -43,6 +54,8 @@ code {
   font-size:25px;
   line-height:94px;
   text-align:center;
-  background: black;
+  background: rgba(0, 0, 0, 0);
   color: white;
 }
+
+

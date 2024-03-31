@@ -1,9 +1,7 @@
 import gsap from 'gsap';
-import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
 import { useEffect } from 'react';
 
 import CodeIcon from '@mui/icons-material/Code';
@@ -17,40 +15,28 @@ import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 import AnimationIcon from '@mui/icons-material/Animation';
 import ApiIcon from '@mui/icons-material/Api';
 import DevicesIcon from '@mui/icons-material/Devices';
+import StorageIcon from '@mui/icons-material/Storage';
+import TerminalIcon from '@mui/icons-material/Terminal';
+import SnowboardingIcon from '@mui/icons-material/Snowboarding';
 
-export default function TestGround() {
-
+export default function InfiniteScroller() {
     const listItems = [
         {icon: DevicesIcon, name: 'Web Developer'},
-        {icon: CodeIcon, name: 'React Expert'},
-        {icon: DesignServicesIcon, name: 'Designer'},
+        {icon: ViewInArIcon, name: '3D Artist'},
+        {icon: StorageIcon, name: 'Back-End Developer'},
         {icon: MusicNoteIcon, name: 'Drummer'},
         {icon: BrushIcon, name: 'Digital Artist'},
-        {icon: ViewInArIcon, name: '3D Artist'},
-        {icon: MusicNoteIcon, name: 'Drummer'},
-        
+        {icon: DesignServicesIcon, name: 'Web Designer'},
+        {icon: CodeIcon, name: 'React Expert'},
+        {icon: TerminalIcon, name: 'Software Engineer'},
         {icon: HikingIcon, name: 'Adventurer'},
         {icon: JavascriptIcon, name: 'JavaScript Expert'},
         {icon: DeveloperBoardIcon, name: 'Front-End Developer'},
-        {icon: ApiIcon, name: 'Back-End Developer'},
         {icon: AnimationIcon, name: 'Animator'},
-
-
-        {icon: MusicNoteIcon, name: 'Python'},
-        {icon: MusicNoteIcon, name: 'Full-Stack'},
-        // {icon: MusicNoteIcon, name: 'Designer'},
-        // {icon: MusicNoteIcon, name: 'Drummer'},
-        // {icon: MusicNoteIcon, name: 'Developer'},
-
-        // {icon: MusicNoteIcon, name: 'Drummer'},
-        // {icon: MusicNoteIcon, name: 'Developer'},
-        // {icon: MusicNoteIcon, name: 'Designer'},
-        // {icon: MusicNoteIcon, name: 'Drummer'},
+        {icon: MusicNoteIcon, name: 'Python Programmer'},
+        {icon: ApiIcon, name: 'Full-Stack Developer'},
+        {icon: SnowboardingIcon, name: 'Snowboarder'},
       ]
-
-    
-    
-
 
     useEffect(() => {
         const setHeight = 100; //height of the boxes
@@ -76,34 +62,20 @@ export default function TestGround() {
         });
     },[])
 
-
     return(
-        <div className='grid grid-cols-1 md:grid-cols-2 content-center h-screen bg-black text-white'>
-            <div className='flex justify-center'>
-                <div className='my-auto'>
-                    <h1 className='text-2xl text-center'>Andrew</h1>
-                    <h1 className='text-8xl'>Stanecek</h1>
+        <div className="container h-screen py-8 flex justify-center my-auto overflow-hidden">
+            <div className="my-auto wrapper ">
+                <div className="boxes " id="boxCol">
+                    {listItems.map((listItem, i) => <div className='box absolute w-1000 my-auto'  key={i}>
+                        <ListItem>
+                        <ListItemAvatar className='flex' >
+                            <listItem.icon fontSize='large'/>
+                        </ListItemAvatar>
+                        <ListItemText className='test' primaryTypographyProps={{fontSize: '50px', fontFamily: 'Oswald-VariableFont_wght'}} primary={listItem.name} />
+                        </ListItem >
+                    </div>)}
                 </div>
             </div>
-
-            <div className="container h-screen py-8 bg-black flex justify-center my-auto overflow-hidden">
-                <div className="bg-white my-auto wrapper ">
-                    <div className="boxes " id="boxCol">
-                        {listItems.map((listItem, i) => <div className='box absolute w-1000 my-auto'  key={i}>
-                            <ListItem>
-                            <ListItemAvatar className='flex' >
-                                <listItem.icon fontSize='large'/>
-                            </ListItemAvatar>
-                            <ListItemText primaryTypographyProps={{fontSize: '50px'}} primary={listItem.name} />
-                            </ListItem >
-                        </div>)}
-                    </div>
-                </div>
-            </div>
-                
-
         </div>
     )
 }
-
-
