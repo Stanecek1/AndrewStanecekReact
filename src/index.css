@@ -33,7 +33,6 @@ code {
   min-height: 141px;
   width: 700px;
   overflow: hidden;
-  background: black;
 }
 .wrapper::after {
   height: 78%;
@@ -41,7 +40,6 @@ code {
   min-height: 280px;
   content:"";
   position:absolute;
-  background: black;
 }
 .boxes {
   top:-50px;
@@ -54,8 +52,6 @@ code {
   font-size:25px;
   line-height:94px;
   text-align:center;
-  background: rgba(0, 0, 0, 0);
-  color: white;
 }
 
 

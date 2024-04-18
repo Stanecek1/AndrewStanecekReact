@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 
 import { useEffect, useRef } from "react";
+import { Canvas } from '@react-three/fiber';
 
 function MyThree() {
   const refContainer = useRef(null);
@@ -47,7 +48,7 @@ function MyThree() {
 
 
   return (
-    <div ref={refContainer}></div>
+    <Canvas></Canvas>
 
   );
 }

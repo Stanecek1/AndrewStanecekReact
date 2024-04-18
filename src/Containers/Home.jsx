@@ -8,7 +8,7 @@ export default function Home() {
                 <MyThree></MyThree>
             </div>
     
-            <div className='grid grid-cols-1 md:grid-cols-2 content-center bg-black h-screen text-white'>
+            <div className='grid grid-cols-1 md:grid-cols-2 content-center h-screen '>
                 <div className='relative flex justify-center '>
                     <div className='my-auto'>
                         <h1 className='text-4xl text-left name'>Andrew</h1>
